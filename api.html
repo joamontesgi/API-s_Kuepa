@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>API</title>
+</head>
+<body>
+    <div class="container text-center">
+    <header>
+        <h1>Documento HTML que renderiza las peticiones y respuesta de las siguientes API's</h1>
+        <a href="https://www.datos.gov.co/resource/d4fr-sbn2.json" target="_blank">Datos Abiertos</a>
+        <br>
+        <a href="https://pokeapi.co/api/v2/pokemon/" target="_blank" >PokeAPI</a>
+        <br>
+        <a href="https://fakestoreapi.com/products" target="_blank" >fakeStoreApi</a>
+    </header>
+        <div>
+            <label>Indique un número para obtener un Pokemón
+                <input type="range" onchange="api()" id="pokemon" min="1" max="248" step="1">
+            </label>
+            <div id="id"></div>
+            <div id="nombre"></div>
+            <div id="imagen"></div>
+            <div id="tipo"></div>
+            <div id="habilidad"></div>
+            <div id="peso"></div>
+            <div id="altura"></div>
+            <button onclick="enviar()" class="btn btn-success">Realizar petición POST</button>
+            <button onclick="obtener()" class="btn btn-primary">Datos Abiertos</button>
+            <div id="mensaje"></div>
+            <table id="table" class="table table-striped"></table>
+        </div>
+    </div>
+</body>
+<script src="api.js"></script>
+</html>
