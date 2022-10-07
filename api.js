@@ -70,3 +70,13 @@ function obtener(){
 }
 
 
+function whatsApp(){
+    var numero = document.getElementById("numero").value;
+    if(numero.length==10){
+        var endpoint = "https://api.whatsapp.com/send?phone=57"+numero;
+        window.open(endpoint);
+    }else{
+        alert("El número no es correcto");
+    }
+}
+
